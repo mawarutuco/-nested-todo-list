@@ -9,7 +9,7 @@ const resources = {
   tw: { translation: tw },
 };
 
-let localStorageGetLanguage = localStorage.getItem('i18nextLng')
+let localStorageGetLanguage = localStorage.getItem("i18nextLng") || "tw";
 
 i18n
   .use(initReactI18next)
