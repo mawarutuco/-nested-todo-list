@@ -3,7 +3,7 @@ import Index from "./ToDoList/Index";
 
 function App() {
   return (
-    <div style={{ background: "#e0eae7", backgroundSize: "100hz" }}>
+    <div style={{ background: "#e0eae7", minHeight: "100vh" }}>
       <Index />
     </div>
   );
