@@ -1,0 +1,75 @@
+// cover bootstrap variable
+// https://getbootstrap.com/docs/5.0/customize/color/
+
+// 主色
+$primary: #65af9c;
+// 次色
+$secondary: #e0eae7;
+// 背景色
+$success: #f2f2f2;
+$info: #555;
+$warning: yellow;
+$danger: red;
+$light: #f4efd2;
+$dark: #fdd;
+
+.tdm-hoverItemShowBigger:hover {
+  transform: scale(1.1);
+}
+
+.tdm-itemShowMoveUp {
+  animation: moveUp 1s;
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $primary;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 5px;
+  height: 0;
+  width: 0;
+}
+
+.tdm-hoverText {
+  --h: 1.2em;   
+line-height: var(--h);
+color: #0000;
+text-shadow: 
+  0 calc(-1*var(--_t,0em)) #65AF9C, 
+  0 calc(var(--h) - var(--_t,0em)) #194221;
+overflow: hidden;
+transition: .3s;
+&:hover {
+    --_t: var(--h);
+  }
+}
+
+.tdm-pointer{
+  cursor: pointer;
+}
+//variant="primary"
+// import bootstrap then import in index.js
+@import "bootstrap/scss/bootstrap.scss";
