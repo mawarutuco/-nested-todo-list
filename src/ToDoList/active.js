@@ -36,7 +36,7 @@ export const checkFatherCheckBox = (tmpX, tmpY, tmpArr) => {
 
 const 排Y = (tmpArr) => {
   let tmpY = 0;
-  tmpArr.map((item) => {
+  tmpArr.forEach((item) => {
     item.ToDoY = tmpY;
     ++tmpY;
   });
@@ -93,7 +93,7 @@ export const 計算範圍 = (x, y, arr) => {
 };
 
 const 移動 = (前, 前count, 後, 後count, arr) => {
-  arr.map((item, index) => {
+  arr.forEach((item, index) => {
     if (index >= 前 && index < 後) {
       item.ToDoY += 後count;
     }
@@ -149,7 +149,7 @@ export const moveUp = (toDo, setToDo, id) => {
   let currentIdx = changeIdx;
   tmpArr[originalIdx].ToDoY = currentIdx;
   let keep = true;
-  tmpArr.map((item, index) => {
+  tmpArr.forEach((item, index) => {
     if (index > originalIdx) {
       if (item.ToDoX <= tmpX) keep = false;
       if (keep) {
@@ -217,5 +217,7 @@ export const ShowPage = (page, toDo) => {
       return toDo.filter((item) => item.isChecked === false);
     case t("completed"):
       return toDo.filter((item) => item.isChecked === true);
+    default:
+      return toDo;  
   }
 };
