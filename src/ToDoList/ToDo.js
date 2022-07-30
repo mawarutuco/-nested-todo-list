@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, forwardRef } from "react";
+import  { useEffect, useRef, forwardRef } from "react";
 import { Form, Button, InputGroup, Dropdown } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { FaTrash } from "react-icons/fa";
@@ -77,6 +77,8 @@ const ToDoItem = ({ toDoState,  toDoItem }) => {
   };
 
   const keyDownActive = (e, id) => {
+    
+    /*eslint default-case: "error"*/
     switch (e.keyCode) {
       //enter
       case 13: {
@@ -143,6 +145,8 @@ const ToDoItem = ({ toDoState,  toDoItem }) => {
         }
         break;
       }
+
+      // No Default
     }
   };
 
