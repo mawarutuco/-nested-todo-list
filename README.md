@@ -11,3 +11,5 @@
 
 ## 語言切換
 ![image](https://user-images.githubusercontent.com/98326769/181872671-4bf92ff0-3543-40dc-9b49-3dc193a20072.png)
+![image](https://user-images.githubusercontent.com/98326769/181872714-70fbe4ae-77bd-4189-928c-5a46a833f55d.png)
+
