@@ -54,7 +54,7 @@ const Usage = () => {
         <OverlayTrigger trigger="click" placement="top" overlay={popover}>
           <Button
             variant="secondary"
-            className="position-absolute fixed-bottom"
+            className="td-usage"
           >
             <AiOutlineQuestion />
           </Button>
