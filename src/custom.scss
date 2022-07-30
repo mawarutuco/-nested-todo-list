@@ -13,9 +13,6 @@ $danger: red;
 $light: #f4efd2;
 $dark: #fdd;
 
-.tdm-hoverItemShowBigger:hover {
-  transform: scale(1.1);
-}
 
 .tdm-itemShowMoveUp {
   animation: moveUp 1s;
@@ -51,20 +48,6 @@ $dark: #fdd;
   border-radius: 5px;
   height: 0;
   width: 0;
-}
-
-.tdm-hoverText {
-  --h: 1.2em;   
-line-height: var(--h);
-color: #0000;
-text-shadow: 
-  0 calc(-1*var(--_t,0em)) #65AF9C, 
-  0 calc(var(--h) - var(--_t,0em)) #194221;
-overflow: hidden;
-transition: .3s;
-&:hover {
-    --_t: var(--h);
-  }
 }
 
 .td-usage{
