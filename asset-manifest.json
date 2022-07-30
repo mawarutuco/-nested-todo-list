@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/nested-todo-list/static/css/main.6cfb238c.css",
-    "main.js": "/nested-todo-list/static/js/main.351ad4ba.js",
+    "main.css": "/nested-todo-list/static/css/main.4767ff43.css",
+    "main.js": "/nested-todo-list/static/js/main.6960c8af.js",
     "index.html": "/nested-todo-list/index.html",
-    "main.6cfb238c.css.map": "/nested-todo-list/static/css/main.6cfb238c.css.map",
-    "main.351ad4ba.js.map": "/nested-todo-list/static/js/main.351ad4ba.js.map"
+    "main.4767ff43.css.map": "/nested-todo-list/static/css/main.4767ff43.css.map",
+    "main.6960c8af.js.map": "/nested-todo-list/static/js/main.6960c8af.js.map"
   },
   "entrypoints": [
-    "static/css/main.6cfb238c.css",
-    "static/js/main.351ad4ba.js"
+    "static/css/main.4767ff43.css",
+    "static/js/main.6960c8af.js"
   ]
 }
