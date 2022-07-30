@@ -42,8 +42,7 @@ const Index = () => {
 
   return (
     <>
-      <ChangeLanguage />
-      <Usage />
+
 
       <Container className="mt-5">
         <Row>
