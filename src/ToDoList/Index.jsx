@@ -2,14 +2,10 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import ToDo from "./ToDo";
 import AddToDo from "./AddToDo";
-import ChangeLanguage from "../i18n/ChangeLanguage";
 import ToDoStateBtn from "./ToDoStateBtn";
-import Usage from "./Usage";
 import { ShowPage } from "./active";
-import { useTranslation } from "react-i18next";
 
 const Index = () => {
-  const { t } = useTranslation();
 
   const cardStyle = {
     boxShadow: "53px 41px 80px rgba(0, 0, 0, 0.33)",
@@ -41,10 +37,7 @@ const Index = () => {
   const [page, setPage] = useState(0);
 
   return (
-    <>
-
-
-      <Container className="mt-5">
+      <Container className="pt-5">
         <Row>
           <Card style={cardStyle} className="tdm-itemShowMoveUp">
             <Card.Title className="m-2">
@@ -67,7 +60,6 @@ const Index = () => {
           </Card>
         </Row>
       </Container>
-    </>
   );
 };
 
