@@ -27,7 +27,7 @@ const Usage = () => {
 
   const popover = (
     <Popover>
-      <Popover.Header as="h2">{t("userGuide")}</Popover.Header>
+      <Popover.Header>{t("userGuide")}</Popover.Header>
       <Popover.Body>
         <li>
           <Badge>enter</Badge> {t("enterAddNewTodoItem")}
