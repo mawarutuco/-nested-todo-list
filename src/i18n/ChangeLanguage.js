@@ -11,7 +11,7 @@ const ChangeLanguage = () => {
     <Button
       ref={ref}
       onClick={(e) => onClick(e)}
-      className="btn-lg position-absolute end-0 top-0 m-3"
+      className="btn-lg position-absolute end-0 top-0"
       variant="light"
     >
       <TbWorld />
