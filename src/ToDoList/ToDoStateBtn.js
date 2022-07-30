@@ -10,10 +10,10 @@ const ToDoStateBtn = ({ setPage, page }) => {
 
   return (
     <ButtonGroup>
-      {pages.map((item) => (
+      {pages.map((item, index) => (
         <Button
-          variant={changeBtnColor(item)}
-          onClick={() => setPage(item)}
+          variant={changeBtnColor(index)}
+          onClick={() => setPage(index)}
           key={item}
         >
           {item}

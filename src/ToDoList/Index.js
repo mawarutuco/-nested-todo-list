@@ -38,7 +38,7 @@ const Index = () => {
     localStorage.setItem("todo-list", JSON.stringify(toDo));
   }, [toDo]);
 
-  const [page, setPage] = useState(t("all"));
+  const [page, setPage] = useState(0);
 
   return (
     <>
