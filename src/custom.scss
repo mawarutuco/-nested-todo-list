@@ -68,9 +68,10 @@ transition: .3s;
 }
 
 .td-usage{
-  position:absolute;
+  position:fixed;
   bottom:0;
   left:50%;
+  z-index:99;
 }
 //variant="primary"
 // import bootstrap then import in index.js
