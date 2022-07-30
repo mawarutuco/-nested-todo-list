@@ -2,30 +2,32 @@ import { AiOutlineQuestion } from "react-icons/ai";
 import { Button, OverlayTrigger, Popover, Badge } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
-//判斷手機板就不出現說明
-function checkDevice() {
-  let userAgentInfo = navigator.userAgent;
-  let Agents = [
-    "Android",
-    "iPhone",
-    "SymbianOS",
-    "Windows Phone",
-    "iPad",
-    "iPod",
-  ];
-  let flag = false;
-  Agents.forEach((n) => {
-    if (userAgentInfo.indexOf(n) > -1) flag = true;
-  });
-  return flag;
-}
+const Usage = () => {
+  const { t } = useTranslation();
 
-const popover = (t) => {
-  return (
+  //判斷手機板就不出現說明
+  function checkDevice() {
+    let userAgentInfo = navigator.userAgent;
+    let Agents = [
+      "Android",
+      "iPhone",
+      "SymbianOS",
+      "Windows Phone",
+      "iPad",
+      "iPod",
+    ];
+    let flag = true;
+    Agents.forEach((n) => {
+      if (userAgentInfo.indexOf(n) > -1) flag = false;
+    });
+    return flag;
+  }
+
+  let isPhone = checkDevice();
+
+  const popover = (
     <Popover>
-      <Popover.Header as="h2" className="bg-secondary">
-        {t("userGuide")}
-      </Popover.Header>
+      <Popover.Header as="h2">{t("userGuide")}</Popover.Header>
       <Popover.Body>
         <li>
           <Badge>enter</Badge> {t("enterAddNewTodoItem")}
@@ -45,19 +47,20 @@ const popover = (t) => {
       </Popover.Body>
     </Popover>
   );
-};
-
-const Usage = () => {
-  const { t } = useTranslation();
 
   return (
-    <div style={{ visibility: checkDevice() ? "hidden" : "" }}>
-      <OverlayTrigger trigger="click" placement="right" overlay={popover(t)}>
-        <Button variant="secondary">
-          <AiOutlineQuestion />
-        </Button>
-      </OverlayTrigger>
-    </div>
+    <>
+      {isPhone && (
+        <OverlayTrigger trigger="click" placement="top" overlay={popover}>
+          <Button
+            variant="secondary"
+            className="position-absolute fixed-bottom"
+          >
+            <AiOutlineQuestion />
+          </Button>
+        </OverlayTrigger>
+      )}
+    </>
   );
 };
 
