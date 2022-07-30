@@ -67,8 +67,10 @@ transition: .3s;
   }
 }
 
-.tdm-pointer{
-  cursor: pointer;
+.td-usage{
+  position:absolute;
+  bottom:0;
+  left:50%;
 }
 //variant="primary"
 // import bootstrap then import in index.js
